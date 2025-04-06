@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="seq_car_sale" model="ir.sequence">
+        <field name="name">Sales Reference</field>
+        <field name="code">car.purchase</field> <!--any name can be given-->
+        <field name="prefix">CP</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+</odoo>

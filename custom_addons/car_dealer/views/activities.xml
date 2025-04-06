@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_car_color_tree" model="ir.ui.view">
+        <field name="name">car.color.tree</field>
+        <field name="model">car.color</field>
+        <field name="arch" type="xml">
+            <tree string="Car Color" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="color_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_car_color" model="ir.actions.act_window">
+        <field name="name">Car Color</field>
+        <field name="res_model">car.color</field>
+        <field name="view_mode">tree</field>
+           <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new color
+            </p>
+        </field>
+    </record>
+
+</odoo>

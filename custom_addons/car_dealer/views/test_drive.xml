@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="view_test_drive_tree" model="ir.ui.view">
+        <field name="name">test.drive.tree</field>
+        <field name="model">test.drive</field>
+        <field name="arch" type="xml">
+            <tree string="Test Drive">
+                <field name="customer_id"/>
+                <field name="car_id" optional="hide"/>
+                <field name="booking_date" optional="hide"/>
+                <field name="contact" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_test_drive_form" model="ir.ui.view">
+    <field name="name">test.drive.form</field>
+    <field name="model">test.drive</field>
+    <field name="arch" type="xml">
+        <form string="Test Drive">
+            <header>
+                <button name="action_confirm" type="object" string="Confirm" invisible="state != 'draft'"
+                        class="btn-danger"/>
+                <button name="action_ongoing" type="object" string="Ongoing" invisible="state != 'confirmed'"
+                        class="oe_highlight"/>
+                <button name="action_done" type="object" string="Done" invisible="state != 'ongoing'"
+                        class="btn-success"/>
+                <button name="action_cancel" type="object" string="Cancel" invisible="state == 'done'"/>
+                <field name="state" widget="statusbar" statusbar_visible="draft,confirmed,ongoing,done"/>
+            </header>
+             <sheet>
+                <group>
+                    <group>
+                        <field name="customer_id"/>
+                        <field name="car_id"/>
+                        <field name="contact"/>
+                    </group>
+                    <group>
+                        <field name="booking_date"/>
+                    </group>
+                </group>
+            </sheet>
+        </form>
+    </field>
+    </record>
+
+    <record id="action_test_drive" model="ir.actions.act_window">
+        <field name="name">Test Drive</field>
+        <field name="res_model">test.drive</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add new test drive
+            </p>
+        </field>
+    </record>
+
+</odoo>

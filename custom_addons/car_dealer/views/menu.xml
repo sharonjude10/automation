@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="menu_car_root"
+              name="Car Guy"/>
+
+    <menuitem id="menu_home"
+              name="Home"
+              parent="menu_car_root"/>
+
+    <menuitem id="menu_car_collection"
+              name="Garage"
+              parent="menu_home"
+              action="action_car_collection"/>
+
+    <menuitem id="menu_car_customers"
+              name="Customer"
+              parent="menu_home"
+              action="action_car_customer"/>
+
+    <menuitem id="menu_operations"
+              name="Operations"
+              parent="menu_car_root"/>
+
+    <menuitem id="menu_test_drive"
+              name="Test Drive"
+              parent="menu_operations"
+              action="action_test_drive"/>
+
+    <menuitem id="menu_purchase"
+              name="Sales"
+              parent="menu_operations"
+              action="action_car_sale"/>
+
+    <menuitem id="menu_service"
+              name="Service"
+              parent="menu_operations"/>
+
+    <menuitem id="menu_car_configuration"
+              name="Configuration"
+              parent="menu_car_root"/>
+
+    <menuitem id="menu_car_color"
+              name="Color"
+              parent="menu_car_configuration"
+              action="action_car_color"/>
+</odoo>
