@@ -10,6 +10,7 @@
                 <field name="email_cc"/>
                 <field name="recent_cc"/>
                 <field name="mob"/>
+                <field name="st"/>
 <!--                new comment-->
 <!--                newwwwww-->
             </xpath>
