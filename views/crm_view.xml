@@ -7,6 +7,7 @@
         <field name="inherit_id" ref="crm.crm_lead_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//notebook/page[@name='lead']/group/group[2]" position="inside">
+                <field name="stddddddddderrmmmmmmmmmmmm"/>
                 <field name="email_cc"/>
                 <field name="recent_cc"/>
                 <field name="mob"/>
