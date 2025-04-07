@@ -6,7 +6,8 @@
     'depends': ['base', 'crm'],
     'data': [
         'security/crm_record_rule.xml',
-        'views/crm_view.xml'
+        'views/crm_view.xml',
+        'views/test.xml'
     ],
 
     'license': 'LGPL-3',
